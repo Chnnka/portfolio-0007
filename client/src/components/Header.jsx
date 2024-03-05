@@ -8,7 +8,7 @@ import {
   Dropdown,
   DropdownDivider,
 } from 'flowbite-react';
-import logo from '../assets/sign.svg';
+import logo from './../assets/logo/Logo_Personal.png';
 
 export default function Header() {
   return (
@@ -17,7 +17,7 @@ export default function Header() {
         <Link to={'/'} className="flex">
           <img
             src={logo}
-            className="mr-3 h-6 sm:h-9"
+            className="mr-3 h-5 sm:h-9"
             alt="Flowbite React Logo"
           />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">

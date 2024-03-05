@@ -9,6 +9,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 
+
 export default function Home() {
   const links = [
     {
@@ -80,7 +81,7 @@ export default function Home() {
             </button>
           </Link>
 
-          <button class="bg-gray-300 hover:bg-amber-400  text-gray-800 font-bold py-2 px-4 rounded-full inline-flex items-center">
+          <button class="bg-amber-300 hover:bg-amber-400  text-gray-800 font-bold py-2 px-4 rounded-full inline-flex items-center">
             <svg
               class="fill-current w-4 h-4 mr-2"
               xmlns="http://www.w3.org/2000/svg"
