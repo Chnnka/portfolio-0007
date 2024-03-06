@@ -8,6 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import avatar from '../assets/avatar/avatar.jpg';
+import Education from '../components/Education';
+import Experience from '../components/Experience';
+import Brief from '../components/Brief';
 
 export default function About() {
   const links = [
@@ -59,27 +62,6 @@ export default function About() {
         </div>
         <div class="w-full h-px bg-gray-200 mt-5"></div>
         <div className="flex gap-4 mt-4 justify-center">
-          <Link to={'/about'}>
-            <button className="bg-transparent border border-gray-400 hover:border-amber-400 text-gray-800 font-bold py-2 px-4 rounded-full inline-flex items-center gap-1">
-              <span>About Me</span>
-              <svg
-                class="w-3 h-3 text-gray-800 dark:text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </button>
-          </Link>
-
           <button class="bg-amber-300 hover:bg-amber-400  text-gray-800 font-bold py-2 px-4 rounded-full inline-flex items-center">
             <svg
               class="fill-current w-4 h-4 mr-2"
@@ -91,12 +73,9 @@ export default function About() {
             <span>Download Resume</span>
           </button>
         </div>
-        <div class="inline-flex items-center justify-center w-full">
-          <hr class="w-64 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
-          <span class="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">
-            or
-          </span>
-        </div>
+        <Brief />
+        <Experience />
+        <Education />
       </div>
     </div>
   );
