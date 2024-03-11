@@ -10,6 +10,7 @@ import avatar from '../assets/avatar/avatar.jpg';
 import Education from '../components/Education';
 import Experience from '../components/Experience';
 import Brief from '../components/Brief';
+import Skills from '../components/Skills';
 
 export default function About() {
   const links = [
@@ -69,12 +70,15 @@ export default function About() {
             >
               <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
             </svg>
-            <span>Download Resume</span>
+            <a href="/api/resume" download="Channaka_Gunawardhane_Resume.pdf">
+              <span>Download Resume</span>
+            </a>
           </button>
         </div>
         <Brief />
         <Experience />
         <Education />
+        <Skills/>
       </div>
     </div>
   );
