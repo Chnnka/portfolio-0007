@@ -6,7 +6,6 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import avatar from '../assets/avatar/avatar.jpg';
 import Education from '../components/Education';
 import Experience from '../components/Experience';
