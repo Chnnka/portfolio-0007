@@ -11,6 +11,7 @@ import {
 import logo from './../assets/logo/Logo_Personal.png';
 
 export default function Header() {
+
   return (
     <Navbar fluid rounded className="fixed top-0 left-0 w-full z-50 shadow-sm">
       <NavbarBrand as={Link} href="/">
@@ -30,9 +31,9 @@ export default function Header() {
         <Navbar.Link>
           <Link to="/about">About</Link>
         </Navbar.Link>
-        <Navbar.Link href="#">
+        <Navbar.Link>
           <Dropdown label="Showcase" inline>
-            <Dropdown.Item>Artworks</Dropdown.Item>
+            <Dropdown.Item as={Link} to={'/artworks'}>Artworks</Dropdown.Item>
             <Dropdown.Item>UI/UX</Dropdown.Item>
             <Dropdown.Item>Applications</Dropdown.Item>
           </Dropdown>
