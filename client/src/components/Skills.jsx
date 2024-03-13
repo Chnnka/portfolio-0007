@@ -9,10 +9,16 @@ export default function Skills() {
           Skills
         </span>
       </div>
-      <div className="max-w-md text-center justify-center items-center">
-        <ol className="text-gray-600">
-          <li>Mobile Application Development - Flutter</li>
-          <li>UI & Visual Design - Figma, Adobe Photoshop</li>
+      <div className="max-w-md text-center justify-start items-start">
+        <ol className="text-gray-600 justify-start">
+          <li>
+            Mobile Application Development -{' '}
+            <span className="font-semibold">Flutter</span>
+          </li>
+          <li>
+            UI & Visual Design -{' '}
+            <span className="font-semibold">Figma, Adobe Photoshop</span>
+          </li>
           <li>HTML, CSS, JavaScript</li>
           <li>ReactJS</li>
         </ol>
