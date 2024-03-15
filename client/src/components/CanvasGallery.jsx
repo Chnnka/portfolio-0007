@@ -2,7 +2,7 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import just_a_life_01 from './../assets/canvas/JustALife_01_2023_03_17.jpg';
-import devilmask from './../assets/canvas/image3.jpg';
+import devilmask from './../assets/canvas/devilmask.jpg';
 import ninearch from './../assets/canvas/image7.jpg';
 import lakeround1 from './../assets/canvas/image8.jpg';
 import daladamaligawa from './../assets/canvas/image9.jpg';
@@ -12,6 +12,14 @@ import unawatuna from './../assets/canvas/image15.jpg';
 import madeupscenery01 from './../assets/canvas/image22.jpg';
 import lion01 from './../assets/canvas/image25.jpg';
 import sunsetold from './../assets/canvas/image26.jpg';
+import seegiriya from './../assets/canvas/seegiriya.jpg';
+import waterfallFirst from './../assets/canvas/waterfall_first.jpg';
+import oakForest from './../assets/canvas/oak_forest.jpg';
+import moonLight from './../assets/canvas/MoonNight.jpg';
+import mist from './../assets/canvas/Mist.jpg';
+import lionKing from './../assets/canvas/LionKing.jpg';
+import blackPanther from './../assets/canvas/BlackPanther.jpg';
+import madeUpScenery2 from './../assets/canvas/MadeUpScenery02.jpg';
 
 import { Box, maxHeight } from '@mui/system';
 
@@ -27,61 +35,86 @@ function srcset(image, size, rows = 1, cols = 1) {
 const itemData = [
   {
     img: just_a_life_01,
-    title: 'Breakfast',
-    rows: 2,
-    cols: 2,
+    title: 'just a life',
   },
   {
     img: devilmask,
-    title: 'Burger',
+    title: 'Devil Mask',
   },
   {
     img: ninearch,
-    title: 'Camera',
+    title: 'Nine Arch',
   },
   {
     img: lakeround1,
     title: 'Coffee',
-    cols: 2,
   },
   {
     img: daladamaligawa,
-    title: 'Hats',
-    cols: 2,
+    title: 'Temple of Tooth Relic',
   },
   {
     img: mandalaroundcanvas,
     title: 'Honey',
-    author: '@arwinneil',
-    rows: 2,
-    cols: 2,
+    author: 'Mandala On Canvas',
   },
   {
     img: ninearch2,
-    title: 'Basketball',
+    title: 'Nine Arch with Train',
   },
   {
     img: unawatuna,
-    title: 'Fern',
+    title: 'Unawatuna',
   },
   {
     img: madeupscenery01,
-    title: 'Mushrooms',
-    rows: 2,
-    cols: 2,
+    title: 'Made Up Scenery 1',
   },
   {
     img: lion01,
-    title: 'Tomato basil',
+    title: 'Lion Face',
   },
   {
     img: sunsetold,
-    title: 'Sea star',
+    title: 'Sun Set old',
+  },
+  {
+    img: seegiriya,
+    title: 'Sigiriya',
+  },
+  {
+    img: waterfallFirst,
+    title: 'Waterfall Scenery',
+  },
+  {
+    img: moonLight,
+    title: 'Moon Night',
+  },
+  {
+    img: oakForest,
+    title: 'Oak Forest',
+  },
+  {
+    img: mist,
+    title: 'Misty forest',
+  },
+  {
+    img: lionKing,
+    title: 'Lion King',
+  },
+  {
+    img: blackPanther,
+    title: 'Black Panther',
+  },
+  {
+    img: madeUpScenery2,
   },
 ];
 export default function CanvasGallery() {
   return (
-    <Box sx={{ width: '80%',margin:'auto', height: '100%', overflowY: 'scroll' }}>
+    <Box
+      sx={{ width: '80%', margin: 'auto', height: '100%', overflowY: 'scroll' }}
+    >
       <ImageList variant="masonry" cols={3} gap={8}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
