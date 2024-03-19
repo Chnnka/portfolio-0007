@@ -2,7 +2,7 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { Box, maxHeight } from '@mui/system';
-import imageData from '../constants/canvasGalleryData';
+import canvasImageData from '../constants/canvasGalleryData';
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
@@ -20,20 +20,20 @@ const ImageCard = ({ image, title, width, height }) => {
 };
 
 export default function CanvasGallery() {
-  const imageWidth = 248; 
-  const imageHeight = 248; 
+  // const imageWidth = 248; 
+  // const imageHeight = 248; 
   return (
     <Box
       sx={{ width: '80%', margin: 'auto', height: '100%', overflowY: 'scroll' }}
     >
       <ImageList variant="masonry" cols={3} gap={8}>
-        {imageData.map((item) => (
+        {canvasImageData.map((item) => (
           <ImageCard
             key={item.img}
             image={item.img}
             title={item.title}
-            width={imageWidth}
-            height={imageHeight}
+            // width={imageWidth}
+            // height={imageHeight}
           />
         ))}
       </ImageList>

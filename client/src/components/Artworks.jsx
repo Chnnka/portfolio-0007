@@ -2,6 +2,7 @@ import { Tabs } from 'flowbite-react';
 import { HiClipboardList, HiCloud, HiPencil, HiPhotograph } from 'react-icons/hi';
 import React from 'react';
 import CanvasGallery from './CanvasGallery';
+import PencilGallery from './PencilGallery';
 
 export default function Artworks() {
   return (
@@ -11,13 +12,7 @@ export default function Artworks() {
           <CanvasGallery/>
         </Tabs.Item>
         <Tabs.Item title="Pencil Drawings" icon={HiPencil}>
-          This is{' '}
-          <span className="font-medium text-gray-800 dark:text-white">
-            Dashboard tab's associated content
-          </span>
-          . Clicking another tab will toggle the visibility of this one for the
-          next. The tab JavaScript swaps classes to control the content
-          visibility and styling.
+          <PencilGallery/>
         </Tabs.Item>
         <Tabs.Item title="Pebble Gallery" icon={HiCloud}>
           This is{' '}

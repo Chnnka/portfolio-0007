@@ -18,7 +18,7 @@ import lionKing from './../assets/canvas/LionKing.jpg';
 import blackPanther from './../assets/canvas/BlackPanther.jpg';
 import madeUpScenery2 from './../assets/canvas/MadeUpScenery02.jpg';
 
-const imageData = [
+const canvasImageData = [
   {
     img: just_a_life_01,
     title: 'just a life',
@@ -97,4 +97,4 @@ const imageData = [
   },
 ];
 
-export default imageData;
+export default canvasImageData;
