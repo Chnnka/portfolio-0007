@@ -86,15 +86,15 @@ const pencilImageData=[
   },
   {
     img:MuleDeer,
-    title:'Saree'
+    title:'Mule Deer'
   },
   {
     img:Snoop,
-    title:'Saree'
+    title:'Snoop'
   },
   {
     img:Figure,
-    title:'Saree'
+    title:'Figure Drawing'
   },
 
 ];
