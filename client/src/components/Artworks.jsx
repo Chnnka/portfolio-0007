@@ -9,6 +9,7 @@ import React from 'react';
 import CanvasGallery from './CanvasGallery';
 import PencilGallery from './PencilGallery';
 import PebbleGallery from './PebbleGallery';
+import OtherArtGallery from './OtherArtGallery';
 
 export default function Artworks() {
   return (
@@ -27,7 +28,9 @@ export default function Artworks() {
         <Tabs.Item title="Pebble Gallery" icon={HiCloud}>
           <PebbleGallery />
         </Tabs.Item>
-        <Tabs.Item title="Other" icon={HiClipboardList}></Tabs.Item>
+        <Tabs.Item title="Other" icon={HiClipboardList}>
+          <OtherArtGallery/>
+        </Tabs.Item>
       </Tabs>
     </div>
   );

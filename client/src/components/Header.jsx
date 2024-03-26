@@ -1,14 +1,8 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarToggle,
-  Dropdown,
-} from 'flowbite-react';
+import { Link } from 'react-router-dom';
+import { Navbar, NavbarBrand, NavbarToggle, Dropdown } from 'flowbite-react';
 import commonImages from '../constants/commonImages';
 
 export default function Header() {
-
   return (
     <Navbar
       fluid
