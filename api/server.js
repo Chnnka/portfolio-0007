@@ -1,9 +1,46 @@
 const express = require('express');
-const app = express();
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
 const path = require('path');
 
-//port number for the server
+const app = express();
 const port = process.env.PORT || 3000;
+const password = process.env.PASSWORD; 
+
+
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({ extended: true })); 
+
+
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com', 
+  port: 465, 
+  secure: false, // Use TLS for secure connection (recommended)
+  auth: {
+    user: 'channaka.sajith@gmail.com',
+    pass: password, // Replace with your email password (consider using app passwords)
+  }
+});
+
+
+app.post('/api/contact', async (req, res) => {
+  const { name, email, message } = req.body;
+  console.log(`Received contact form submission: Name: ${name}, Email: ${email}, Message: ${message}`);
+
+  try {
+    await transporter.sendMail({
+      from: email,
+      to: 'channaka.sajith@gmail.com',
+      subject: 'New Contact Form Submission',
+      html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`,
+    });
+
+    res.json({ message: 'Form submitted successfully!' });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).json({ error: 'Error submitting the form. Please try again later.' });
+  }
+});
 
 // Example route: Respond with "Hello World!" on root path
 app.get('/', (req, res) => {

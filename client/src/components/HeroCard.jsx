@@ -57,13 +57,13 @@ export default function HeroCard() {
             </div>
           </div>
         </div>
-        <div class="w-full h-px bg-gray-200 mt-5"></div>
+        <div className="w-full h-px bg-gray-200 mt-5"></div>
         <div className="flex gap-4 mt-4 justify-center">
           <Link to={'/about'}>
             <button className="bg-transparent border border-gray-400 hover:border-amber-400 text-gray-800 font-bold py-2 px-4 rounded-full inline-flex items-center gap-1">
               <span>About Me</span>
               <svg
-                class="w-3 h-3 text-gray-800 dark:text-white"
+                className="w-3 h-3 text-gray-800 dark:text-white"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -71,18 +71,18 @@ export default function HeroCard() {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M1 5h12m0 0L9 1m4 4L9 9"
                 />
               </svg>
             </button>
           </Link>
 
-          <button class="bg-amber-300 hover:bg-amber-400  text-gray-800 font-bold py-2 px-4 rounded-full inline-flex items-center">
+          <button className="bg-amber-300 hover:bg-amber-400  text-gray-800 font-bold py-2 px-4 rounded-full inline-flex items-center">
             <svg
-              class="fill-current w-4 h-4 mr-2"
+              className="fill-current w-4 h-4 mr-2"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >

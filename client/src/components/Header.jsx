@@ -9,7 +9,7 @@ export default function Header() {
       rounded
       className="fixed top-0 left-0 w-full z-50 shadow-sm backdrop-filter backdrop-blur-md bg-opacity-50"
     >
-      <NavbarBrand as={Link} href="/">
+      <NavbarBrand as={Link} to="/">
         <img
           src={commonImages.logo}
           className="mr-3 h-5 sm:h-9"
