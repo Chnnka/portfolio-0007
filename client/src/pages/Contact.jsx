@@ -1,4 +1,24 @@
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 export default () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_a0p9jke', 'template_yqo6xbg', form.current, {
+        publicKey: 'N6FQ7NGfzaWzRkacD',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
+  };
   const contactMethods = [
     {
       icon: (
@@ -64,29 +84,29 @@ export default () => {
     },
   ];
 
-  const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent default form submission
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault(); // Prevent default form submission
 
-    const formData = new FormData(event.target); // Get form data
-    const name = formData.get('fullName');
-    const email = formData.get('email');
-    const message = formData.get('message');
+  //   const formData = new FormData(event.target); // Get form data
+  //   const name = formData.get('fullName');
+  //   const email = formData.get('email');
+  //   const message = formData.get('message');
 
-    // Send data to backend using fetch or Axios library
-    const response = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, message }),
-    });
+  //   // Send data to backend using fetch or Axios library
+  //   const response = await fetch('/api/contact', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/json' },
+  //     body: JSON.stringify({ name, email, message }),
+  //   });
 
-    if (response.ok) {
-      alert('Your message has been sent successfully!');
-      // Clear the form after successful submission (optional)
-      event.target.reset();
-    } else {
-      alert('Error submitting the form. Please try again later.');
-    }
-  };
+  //   if (response.ok) {
+  //     alert('Your message has been sent successfully!');
+  //     // Clear the form after successful submission (optional)
+  //     event.target.reset();
+  //   } else {
+  //     alert('Error submitting the form. Please try again later.');
+  //   }
+  // };
 
   return (
     <main className="pt-20 pb-16">
@@ -114,17 +134,12 @@ export default () => {
             </div>
           </div>
           <div className="flex-1 mt-12 sm:max-w-lg lg:max-w-md">
-            <form
-              action="/api/contact"
-              method="POST"
-              onSubmit={handleSubmit}
-              className="space-y-5"
-            >
+            <form ref={form} onSubmit={sendEmail} className="space-y-5">
               <div>
                 <label className="font-medium">Full name</label>
                 <input
                   type="text"
-                  name="name"
+                  name="from_name"
                   required
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-yellow-600 shadow-sm rounded-lg"
                 />
@@ -133,7 +148,7 @@ export default () => {
                 <label className="font-medium">Email</label>
                 <input
                   type="email"
-                  name="email"
+                  name="from_email"
                   required
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-yellow-600 shadow-sm rounded-lg"
                 />
@@ -147,7 +162,11 @@ export default () => {
                   className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-yellow-600 shadow-sm rounded-lg"
                 ></textarea>
               </div>
-              <button className="w-full px-4 py-2 text-white font-medium bg-orange-600 hover:bg-orange-500 active:bg-orange-600 rounded-lg duration-150">
+              <button
+                type="submit"
+                value="send"
+                className="w-full px-4 py-2 text-white font-medium bg-orange-600 hover:bg-orange-500 active:bg-orange-600 rounded-lg duration-150"
+              >
                 Submit
               </button>
             </form>
