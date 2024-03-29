@@ -31,7 +31,6 @@ const UiCard = ({ title, description, tags, imageUrl }) => (
 );
 
 export default function Uiux() {
-  
   const cardsData = [
     {
       title: 'Central Perk',

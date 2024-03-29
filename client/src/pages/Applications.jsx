@@ -11,9 +11,9 @@ import tailwind from '../assets/logo/tailwind.png';
 import angular from '../assets/logo/angular.png';
 import figma from '../assets/logo/figma.png';
 import photoshop from '../assets/logo/photoshop.png';
+import projectsDetails from '../constants/projectsDetails';
 
 export default function Applications() {
-  const iconSize = 80;
   return (
     <div className="mt-20 mx-20 min-h-screen">
       <div className="flex flex-col justify-center">
@@ -114,27 +114,43 @@ export default function Applications() {
           </Tooltip>
         </div>
         <br />
-
-        <div className="mx-auto flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:max-w-xl md:flex-row">
-          <img
-            className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-            src="https://tecdn.b-cdn.net/wp-content/uploads/2020/06/vertical.jpg"
-            alt=""
-          />
-          <div className="flex flex-col justify-start p-6">
-            <h5 className="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
-              Card title
-            </h5>
-            <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
-            <p className="text-xs text-neutral-500 dark:text-neutral-300">
-              Last updated 3 mins ago
-            </p>
+        {projectsDetails.map((project) => (
+          <div className="mx-auto flex flex-col rounded-xl bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:max-w-md md:min-w-lg md:flex-row mb-8 ">
+            <img
+              className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+              src={project.image}
+              alt={project.title}
+            />
+            <div className="flex flex-col justify-start p-6">
+              <h5 className="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                {project.title}
+              </h5>
+              <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                {project.description}
+              </p>
+              <div className="">
+                {project.techStack.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-block bg-amber-200 rounded-full mb-2 px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              {project.projectUrl && (
+                <a
+                  href={project.projectUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="mt-2 text-sm text-yellow-500 hover:text-orange-700"
+                >
+                  View Project
+                </a>
+              )}
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
