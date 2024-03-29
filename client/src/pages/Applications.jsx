@@ -21,7 +21,7 @@ export default function Applications() {
           Here I'm showcasing various projects and practices I have done over
           the time.
         </p>
-        <div className="flex mt-2 justify-center space-x-2">
+        <div className="flex mt-2 justify-center items-center space-x-2">
           <Tooltip content="HTML5" style="light">
             <img
               src={html}
