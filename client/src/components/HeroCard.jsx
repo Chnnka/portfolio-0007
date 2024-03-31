@@ -1,3 +1,5 @@
+import Axios from 'axios';
+import fileDownload from 'js-file-download';
 import {
   faBehance,
   faGithub,
@@ -28,6 +30,18 @@ export default function HeroCard() {
       url: 'https://twitter.com/Chnnka',
     },
   ];
+
+  const download = (e) => {
+    e.preventDefault();
+    Axios({
+      url: 'http://localhost:3001',
+      method: 'GET',
+      responseType: 'blob',
+    }).then((res) => {
+      console.log(res);
+      fileDownload(res.data, 'Channaka_Gunawardhane_Resume.pdf');
+    });
+  };
   return (
     <div className="flex justify-center items-center  min-h-screen">
       <div className="flex-col p-4 bg-white shadow-lg rounded-lg gap-5">
@@ -80,7 +94,12 @@ export default function HeroCard() {
             </button>
           </Link>
 
-          <button className="bg-amber-300 hover:bg-amber-400  text-gray-800 font-bold py-2 px-4 rounded-full inline-flex items-center">
+          <button
+            onClick={(e) => {
+              download(e);
+            }}
+            className="bg-amber-300 hover:bg-amber-400  text-gray-800 font-bold py-2 px-4 rounded-full inline-flex items-center"
+          >
             <svg
               className="fill-current w-4 h-4 mr-2"
               xmlns="http://www.w3.org/2000/svg"

@@ -7,22 +7,26 @@ const path = require('path');
 const app = express();
 app.use(cors());
 const port = process.env.PORT || 3001;
-const password = process.env.PASSWORD; 
 
-
-app.use(bodyParser.json()); 
-app.use(bodyParser.urlencoded({ extended: true })); 
-
-
-const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com', 
-  port: 465, 
-  secure: false, // Use TLS for secure connection (recommended)
-  auth: {
-    user: 'channaka.sajith@gmail.com',
-    pass: password, // Replace with your email password (consider using app passwords)
-  }
+app.get("/resume",(req,res)=>{
+  res.download("assets/Channaka_Gunawardhane_Resume.pdf");
 });
+
+
+
+// app.use(bodyParser.json()); 
+// app.use(bodyParser.urlencoded({ extended: true })); 
+
+
+// const transporter = nodemailer.createTransport({
+//   host: 'smtp.gmail.com', 
+//   port: 465, 
+//   secure: false, // Use TLS for secure connection (recommended)
+//   auth: {
+//     user: 'channaka.sajith@gmail.com',
+//     pass: password, // Replace with your email password (consider using app passwords)
+//   }
+// });
 
 
 // app.post('/api/contact', async (req, res) => {
@@ -45,29 +49,6 @@ const transporter = nodemailer.createTransport({
 //     res.status(500).json({ error: 'Error submitting the form. Please try again later.' });
 //   }
 // });
-
-// Example route: Respond with "Hello World!" on root path
-app.get('/', (req, res) => {
-    res.send('Hello World from your Node.js backend!');
-});
-
-// Define the path to your resume PDF file (replace with your actual path)
-const resumePath = path.join(__dirname, 'assets/Channaka Gunawardhane_Resume_.pdf'); 
-
-// Route to serve the resume PDF
-app.get('/resume', (req, res) => {
-    res.sendFile(resumePath, (err) => {
-        if (err) {
-            console.error(err);
-            res.status(500).send('Error downloading resume');
-        } else {
-            console.log('Resume downloaded successfully');
-
-            res.setHeader('Content-Type', 'application/pdf');
-        }
-    });
-});
-
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
