@@ -1,5 +1,6 @@
 import portfolio7 from '../assets/apps/portfolio_07.png';
 import mini_projects from '../assets/apps/mini_projects.png';
+import portfolio1 from '../assets/apps/portfolio_01.jpg';
 const projectsDetails = [
   {
     title:'Portfolio Test 07',
@@ -14,6 +15,13 @@ const projectsDetails = [
     image:mini_projects,
     techStack:['Javascript','HTML','CSS',],
     projectUrl:'https://github.com/Chnnka/portfolio-0007'
+  },
+  {
+    title:'Portfolio 0001',
+    description:'This portfolio website only using HTML, CSS, Javascript and Bootstrap',
+    image:portfolio1,
+    techStack:['HTML','CSS','JS','Bootstrap'],
+    projectUrl:'https://ch-paintings.web.app'
   },
 ];
 
