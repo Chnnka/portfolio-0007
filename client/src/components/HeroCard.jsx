@@ -1,5 +1,3 @@
-import Axios from 'axios';
-import fileDownload from 'js-file-download';
 import {
   faBehance,
   faGithub,
