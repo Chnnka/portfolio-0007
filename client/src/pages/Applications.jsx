@@ -30,7 +30,7 @@ export default function Applications() {
           <br />
           <br />
           <br />
-          <p className="mx-auto mt-16 justify-center items-center">
+          <p className="mx-auto mt-14 py-5 text-center justify-center items-center">
             Here I'm showcasing various projects and practices I have done over
             the time.
           </p>

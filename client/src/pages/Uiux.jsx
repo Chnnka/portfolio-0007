@@ -77,7 +77,7 @@ export default function Uiux() {
   ];
   return (
     <>
-      <div className="sm:mt-28 sm:mx-10 sm:text-justify">
+      <div className="mt-24 sm:mt-28 sm:mx-10 text-center">
         <h2 className="mt-10 mb-5 align-middle w-full font-sans text-center text-2xl">
           UI/UX Designs
         </h2>
