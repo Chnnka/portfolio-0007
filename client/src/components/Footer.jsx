@@ -44,7 +44,7 @@ export default function FooterCustom() {
         <ul className="mt-12 flex justify-center gap-6 md:gap-8">
           <li>
             <a
-              href="https://web.facebook.com/chnnkasg"
+              href="https://www.linkedin.com/in/channaka-gunawardhana/"
               rel="noreferrer"
               target="_blank"
               className="text-gray-700 transition hover:text-gray-700/75"
@@ -69,7 +69,7 @@ export default function FooterCustom() {
           </li>
           <li>
             <a
-              href="https://web.facebook.com/chnnkasg"
+              href="https://www.behance.net/channaka"
               rel="noreferrer"
               target="_blank"
               className="text-gray-700 transition hover:text-gray-700/75"

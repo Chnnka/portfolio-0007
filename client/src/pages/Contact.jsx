@@ -84,32 +84,10 @@ export default () => {
     },
   ];
 
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault(); // Prevent default form submission
 
-  //   const formData = new FormData(event.target); // Get form data
-  //   const name = formData.get('fullName');
-  //   const email = formData.get('email');
-  //   const message = formData.get('message');
-
-  //   // Send data to backend using fetch or Axios library
-  //   const response = await fetch('/api/contact', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: JSON.stringify({ name, email, message }),
-  //   });
-
-  //   if (response.ok) {
-  //     alert('Your message has been sent successfully!');
-  //     // Clear the form after successful submission (optional)
-  //     event.target.reset();
-  //   } else {
-  //     alert('Error submitting the form. Please try again later.');
-  //   }
-  // };
 
   return (
-    <main className="pt-20 pb-16">
+    <main className="sm:mt-10 md:pt-20 pb-16 ">
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div className="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
           <div className="max-w-lg space-y-3">

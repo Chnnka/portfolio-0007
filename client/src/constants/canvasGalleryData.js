@@ -94,6 +94,7 @@ const canvasImageData = [
   },
   {
     img: madeUpScenery2,
+    title:"Made Up Scenery",
   },
 ];
 

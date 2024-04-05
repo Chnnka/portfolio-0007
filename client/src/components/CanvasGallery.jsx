@@ -28,15 +28,9 @@ export default function CanvasGallery() {
     >
       <ImageList variant="masonry" cols={3} gap={8}>
         {canvasImageData.map((item) => (
-          <ImageCard
-            key={item.img}
-            image={item.img}
-            title={item.title}
-          />
+          <ImageCard key={item.img} image={item.img} title={item.title} />
         ))}
       </ImageList>
     </Box>
-
-
   );
 }

@@ -42,7 +42,7 @@ export default function HeroCard() {
   };
   return (
     <div className="flex justify-center items-center  min-h-screen">
-      <div className="flex-col p-4 bg-white shadow-lg rounded-lg gap-5">
+      <div className="flex-col p-4 sm:mt-20 md:mt-0 bg-white shadow-lg rounded-lg gap-5">
         <div className="flex gap-3">
           <img className="w-28 h-28  rounded-full" src={avatar} alt="" />
           <div className="font-medium dark:text-white">

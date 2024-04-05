@@ -76,27 +76,27 @@ const otherArtGallery=[
   },
   {
     image: autodesk_landscape_01,
-    title:'Landscape painting - AutoDesk Sketchbook',
+    title:'Landscape painting 01 - AutoDesk Sketchbook',
     subtitle:''
   },
   {
     image: autodesk_landscape_02,
-    title:'Landscape painting - AutoDesk Sketchbook',
+    title:'Landscape painting 02 - AutoDesk Sketchbook',
     subtitle:''
   },
   {
     image: autodesk_landscape_03,
-    title:'Landscape painting - AutoDesk Sketchbook',
+    title:'Landscape painting 03 - AutoDesk Sketchbook',
     subtitle:''
   },
   {
     image: autodesk_landscape_tree,
-    title:'Landscape painting - AutoDesk Sketchbook',
+    title:'Landscape painting Tree - AutoDesk Sketchbook',
     subtitle:'Digital Painting using AutoDesk'
   },
   {
     image: mandalaSecond,
-    title:'Mandala on wall',
+    title:'Mandala on wall 02',
     subtitle:'Digital Painting using AutoDesk'
   },
   {
@@ -106,17 +106,17 @@ const otherArtGallery=[
   },
   {
     image: livingInAFantasy01,
-    title:'Sunset on Paper - Acrylic painting',
+    title:'Living In a Fantasy 01 - Acrylic painting',
     subtitle:'Digital Painting using AutoDesk'
   },
   {
     image: livingInAFantasy02,
-    title:'Sunset on Paper - Acrylic painting',
+    title:'Living In a Fantasy 02 - Acrylic painting',
     subtitle:'Digital Painting using AutoDesk'
   },
   {
     image: livingInAFantasy03,
-    title:'Sunset on Paper - Acrylic painting',
+    title:'Living In a Fantasy 03 - Acrylic painting',
     subtitle:'Digital Painting using AutoDesk'
   },
 ];

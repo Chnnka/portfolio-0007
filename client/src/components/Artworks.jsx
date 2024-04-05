@@ -13,11 +13,12 @@ import OtherArtGallery from './OtherArtGallery';
 
 export default function Artworks() {
   return (
-    <div className="mt-20 my-auto">
+    <div className="mt-24 md:mt-28 my-auto">
       <Tabs
         aria-label="Tabs with icons"
         style="underline"
         className="justify-center"
+        
       >
         <Tabs.Item active title="Canvas Paintings" icon={HiPhotograph}>
           <CanvasGallery />
@@ -29,7 +30,7 @@ export default function Artworks() {
           <PebbleGallery />
         </Tabs.Item>
         <Tabs.Item title="Other" icon={HiClipboardList}>
-          <OtherArtGallery/>
+          <OtherArtGallery />
         </Tabs.Item>
       </Tabs>
     </div>

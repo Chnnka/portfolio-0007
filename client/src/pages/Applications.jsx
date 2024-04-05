@@ -26,7 +26,7 @@ export default function Applications() {
         />
       </div>
       <div className="relative z-10 min-h-screen">
-        <div className="flex flex-col mx-36 justify-center">
+        <div className="flex flex-col md:mx-36 justify-center">
           <br />
           <br />
           <br />
