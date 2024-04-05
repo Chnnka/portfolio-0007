@@ -42,35 +42,35 @@ export default function Uiux() {
     {
       title: 'Dashboard Project',
       description:
-        'The Central perk website design project (demo project) is an ui design for coffee shop, giving presence of a dark, coffee vibe.',
+        'This is a project management tool dashboard for a friend\'s university porject.',
       tags: ['#figma', '#photoshop', '#ui-ux'],
       imageUrl: dashboard,
     },
     {
       title: 'Quiz App for Kids',
       description:
-        'The Central perk website design project (demo project) is an ui design for coffee shop, giving presence of a dark, coffee vibe.',
+        'Simple quiz mobile application design for kids',
       tags: ['#figma', '#photoshop', '#ui-ux'],
       imageUrl: quiz_app,
     },
     {
       title: 'ArtSync Wireframe',
       description:
-        'The Central perk website design project (demo project) is an ui design for coffee shop, giving presence of a dark, coffee vibe.',
+        'This is a personal ongoing project that I\'m working on.',
       tags: ['#figma', '#photoshop', '#ui-ux'],
       imageUrl: artsync,
     },
     {
       title: 'BOC Smart Passbook',
       description:
-        'The Central perk website design project (demo project) is an ui design for coffee shop, giving presence of a dark, coffee vibe.',
+        'I have re-designed the BOC Smart passbook for greater experience.',
       tags: ['#figma', '#photoshop', '#ui-ux'],
       imageUrl: boc,
     },
     {
       title: 'Cafe Fusion',
       description:
-        'The Central perk website design project (demo project) is an ui design for coffee shop, giving presence of a dark, coffee vibe.',
+        'The Cafe fusion website and mobile view UI design.',
       tags: ['#figma', '#photoshop', '#ui-ux'],
       imageUrl: cafefusion,
     },

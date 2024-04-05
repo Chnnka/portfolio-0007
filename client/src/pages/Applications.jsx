@@ -25,12 +25,12 @@ export default function Applications() {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="relative z-10 min-h-screen">
+      <div className="relative  z-10 min-h-screen">
         <div className="flex flex-col md:mx-36 justify-center">
           <br />
           <br />
           <br />
-          <p className="mx-auto justify-center items-center">
+          <p className="mx-auto mt-16 justify-center items-center">
             Here I'm showcasing various projects and practices I have done over
             the time.
           </p>

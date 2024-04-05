@@ -32,7 +32,7 @@ export default function AboutComponent() {
     },
   ];
   return (
-    <div className="flex min-h-screen sm:mt-28 md:mt-28 mb-10 justify-center">
+    <div className="flex min-h-screen mt-24 sm:mt-28 md:mt-28 mb-10 justify-center">
       <div className="flex-col p-4 bg-white shadow-lg rounded-lg gap-5">
         <div className="flex gap-3">
           <img className="w-28 h-28  rounded-full" src={avatar} alt="" />
