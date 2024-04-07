@@ -4,17 +4,26 @@ import HeroCard from '../components/HeroCard';
 
 export default function Home() {
   const containerStyle = {
-    backgroundImage: `url(${backgroundSVG})`,
+    backgroundImage: { backgroundSVG },
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     position: 'relative',
-    width: '100%', 
-    height: '100vh', 
+    width: '100%',
+    height: '100vh',
   };
   return (
     <>
-      <div style={containerStyle}>
-        <HeroCard />
+      <div className="relative min-h-screen">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={backgroundSVG}
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="relative z-10 min-h-screen">
+          <HeroCard />
+        </div>
       </div>
     </>
   );
