@@ -8,8 +8,8 @@ export default function Home() {
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     position: 'relative',
-    width: '100%', // Set container width (adjust as needed)
-    height: '100vh', // Set container height (adjust as needed)
+    width: '100%', 
+    height: '100vh', 
   };
   return (
     <>
