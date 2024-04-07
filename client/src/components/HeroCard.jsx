@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import avatar from '../assets/avatar/avatar.jpg';
+import ResumeDoc from '../assets/Channaka_Gunawardhane_Resume.pdf';
 
 export default function HeroCard() {
   const links = [
@@ -29,17 +30,7 @@ export default function HeroCard() {
     },
   ];
 
-  const download = (e) => {
-    e.preventDefault();
-    Axios({
-      url: 'http://localhost:3001',
-      method: 'GET',
-      responseType: 'blob',
-    }).then((res) => {
-      console.log(res);
-      fileDownload(res.data, 'Channaka_Gunawardhane_Resume.pdf');
-    });
-  };
+ 
   return (
     <div className="flex justify-center items-center  min-h-screen">
       <div className="flex-col p-4 sm:mt-20 md:mt-0 bg-white shadow-lg rounded-lg gap-5">
@@ -91,22 +82,18 @@ export default function HeroCard() {
               </svg>
             </button>
           </Link>
-
-          <button
-            onClick={(e) => {
-              download(e);
-            }}
-            className="bg-amber-300 hover:bg-amber-400  text-gray-800 font-bold py-2 px-4 rounded-full inline-flex items-center"
-          >
-            <svg
-              className="fill-current w-4 h-4 mr-2"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-            </svg>
-            <span>Download Resume</span>
-          </button>
+          <a href={ResumeDoc} download="Channaka_Gunawardhane_Resume" target="_blank">
+            <button className="bg-amber-300 hover:bg-amber-400  text-gray-800 font-bold py-2 px-4 rounded-full inline-flex items-center">
+              <svg
+                className="fill-current w-4 h-4 mr-2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+              </svg>
+              <span>Download Resume</span>
+            </button>
+          </a>
         </div>
       </div>
     </div>
